@@ -12,7 +12,7 @@ banner: "https://techterms.com/img/xl/cryptography_1206.jpg"
   - [[Arytmetyka modularna]]
   - [[Podpis elektroniczny]]
   - [[Kryptografia krzywych eliptycznych]]
-  - [[SSL/TLS]]
+  - [[SSL TLS]]
 - Szyfry symetryczne
   - [[Szyfr Cezara]]
   - [[Szyfr Vigenere]]
