@@ -17,7 +17,7 @@
 > - ✅ Tak, $n=p\cdot q$, gdzie $p$ i $q$ to liczby pierwsze.
 
 > [!example]- Odpowiedź na zadanie 3
-> Skoro chcemy wysłać wiadomość szyfrowaną hybrydową, to na pewno treść wiadomości szyfrujemy AESem. Skorzystamy ze swojego klucza symetrycznego. Musimy teraz w jakiś sposób przesłać wiadomość razem z kluczem symetrycznym, no ale nie wyślemy klucza jawnie. Możemy skorzystać z asymetrycznego klucza publicznego odbiorcy, którym zaszyfrujemy nasz klucz publiczny. Wtedy odbiorca bezpiecznie go sobie odszyfruje swoim prywatnym.
+> Skoro chcemy wysłać wiadomość szyfrowaną hybrydową, to na pewno treść wiadomości szyfrujemy AESem. Skorzystamy ze swojego klucza symetrycznego. Musimy teraz w jakiś sposób przesłać wiadomość razem z kluczem symetrycznym, no ale nie wyślemy klucza jawnie. Możemy skorzystać z asymetrycznego klucza publicznego odbiorcy, którym zaszyfrujemy nasz klucz symetryczny. Wtedy odbiorca bezpiecznie go sobie odszyfruje swoim prywatnym.
 >
 > Czyli podsumowując:
 > ✅ Asymetryczny klucz publiczny odbiorcy
