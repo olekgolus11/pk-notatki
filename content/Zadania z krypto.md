@@ -155,6 +155,15 @@
 > Nie gwarantuje, ponieważ istnieje wiele innych metod złamania szyfru. Świetnym przykładem jest [[Szyfr Vigenere]] który pomimo tego że posiada nieskończenie wiele różnych kombinacji, można szybko zawęzić poszukiwanie poprzez kryptoanalizę z użyciem np. [[O kryptoanalizie#Metoda anagramowa|metody anagramowej]].
 
 > [!example] Odpowiedź na zadanie 7
+> Dobrze, zatem:
+>
+> 1. Funkcja skrótu musi być jednokierunkowa - odwrócenie hasha nie ma być możliwe
+> 2. Funkcja skrótu musi być wrażliwa - mała zmiana musi bardzo znacząco wpływać na generowanego hasha by niemożliwe było szukanie patternów przy ewentualnym odwracaniu hasha
+> 3. Funkcja skrótu powinna generować wystarczająco duże hashe - w ten sposób unika się ewentualnych kolizji, a sama funkcja jest bezpieczniejsza
+> 4. Funkcja skrótu powinna być szybka - funkcje hashujące są wykorzystywane do hashowania min. dużych dokumentów, zatem ich wydajność jest kluczowa
+> 5. No i najważniejsze - funkcja skrótu powinna generować takiego samego hasha dla tej samej wiadomości, w przeciwnym wypadku funkcje hashujące byłyby nieużyteczne
+
+> [!example] Odpowiedź na zadanie 8
 > Szyfr stosuje operacje XOR na każdym bicie wiadomości. Szyfr sam w sobie raczej rzadko o ile w ogóle używany, jednakże operacja XOR jest wykorzystywana w wielu innych algorytmach szyfrujących, np. w [[Szyfr AES|AES]].
 
 #pk #it
