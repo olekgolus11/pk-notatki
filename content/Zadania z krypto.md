@@ -67,13 +67,94 @@
 > Dlaczego są wykorzystywane wspólnie? Ponieważ idealnie się uzupełniają. Skoro RSA jest w stanie "nadawać" klucz publiczny, by móc pozwolić potencjalnym nadawcom coś do nas wysłać, to należy jedynie jeszcze pozwolić im zaszyfrować daną wiadomość efektywnie. A mogą to zrobić przy wykorzystaniu AES. Tworzą sobie klucz "sesji", którym szyfrują wiadomość, a następnie kluczem publicznym RSA szyfrują ten klucz sesji i nam go odsyłają. My możemy sobie ten klucz odszyfrować i przeczytać wiadomość.
 
 ![](https://i.imgur.com/El3dJUm.png)
+
+> [!example]- Odpowiedź
+>
+> - ❓ To jest albo błąd, albo pułapka (hasło w kontekście kryptografii to to samo co szyfr, czyli zaszyfrowana wiadomość, a czytając to polecenie myślimy od razu o kluczu)
+> - ✅ Tak, skoro mamy klucz to i kłódka powinna od razu puścić
+> - ✅ Tak, inaczej mielibyśmy do czynienia z hashem
+> - ✅ Tak, np. RSA o $p=7$ i $q=3$ ma chujowe naiwne bezpieczeństwo, i przez to też łatwo jest ten przypadek zbruteforceować
+
 ![](https://i.imgur.com/sH0Kq4f.png)
+
+> [!example]- Odpowiedź
+>
+> - ✅ $Y=X^{e}\mod \phi$
+> - ✅ $X=Y^{d}\mod n$
+>
+> Ważna uwaga, $\phi$ to to samo co $n$. Nie rozumiem po co wykładowca dorzuca zbędne komplikacje
+
 ![](https://i.imgur.com/wVK8yzK.png)
+
+> [!example]- Odpowiedź
+> SPZAVWHK
+
 ![](https://i.imgur.com/vzajOcV.png)
+
+> [!example]- Odpowiedź na zadanie 13
+>
+> - ❌ Oj nie bracje, wektor plecaka odpowiada wektorowi binarnemu, czyli 3 to byłoby $1234+599$
+> - ✅ Tak, bo każdy znak w ASCII to jeden bajt, czyli 8 bitów, a wektor załadunku tutaj ma 8 bitów więc gituwa
+> - ❌ Nie mogą być, bo to są liczby które służą do przekształcenia plecaka łatwego w trudny, one muszą mieć $NWD=1$. To nie są liczby które dorzucamy do plecaka!!!
+> - ❌ Spełnia, wektor jest superrosnący
+
+> [!example]- Odpowiedź na zadanie 14
+>
+> - $(2,5,15,33,67,150,313,750)$
+> - $(0,1,0,0,1,1,1,0)$
+
+> [!example]- Odpowiedź na zadanie 15
+> Jest jako pierwsze zadanie w teście na górze
+
 ![](https://i.imgur.com/vi8dnHq.png)
+
+> [!example]- Odpowiedź na zadanie 9
+> ✅ - Tak, to główna charakterystyka hasha, dlatego są bezpieczne bo nie prezentują żadnych widocznych zależności
+> ❌ - W teorii funkcja powinna to zapewniać, ale jest to matematycznie niemożliwe, nawet jeśli [[SHA-2|SHA512]] generuje $2^512$ możliwych hashy, to i tak jest to skończona liczba, nieważne jak duża, zawsze istnieje prawdopodobieństwo kolizji
+> ❌ - LIE, hash z danego algorytmu ma zawsze tą samą długość
+> ✅ - Dokładnie tak, pisałem o tym wyżej
+
+> [!example] Odpowiedź na zadanie 10
+> [[SSL TLS#Jak działają SSL/TLS:]]
+
+> [!example]- Odpowiedź na zadanie 11
+> Zakładając, że przyjmujemy, że klucz posiada 56 bitów (oczywiście zabrakło w specyfikacji zadania ale staram się nie wkurwiać), to należy policzyć to tak:
+>
+> 1. Od 56 bitów odejmujemy 3\*4 bity (bo jedna szesnastkowa liczba to 4 bity), zostaje nam 44 bity
+> 2. Czas średni to ilość kombinacji / 2, czyli $2^44/2=2^{43}$
+
+> [!example] Odpowiedź na zadanie 12
+> No tego akurat w notatkach nie mam :D
+
 ![](https://i.imgur.com/KrQYjti.png)
+
+> [!example] Odpowiedź na zadanie 6
+> Dla [[Szyfr AES|AES]] może być 128, 192 i 256
+
+> [!example] Odpowiedź na zadanie 7
+> Wyjaśniałem wyżej
+
+> [!example] Odpowiedź na zadanie 8
+> Niezłe gówno, zauważcie że to się zapętla po prostu
+
 ![](https://i.imgur.com/QaUqva0.png)
+
+> [!example] Odpowiedź na zadanie 4
+>
+> - ❌ Nie, wyjaśniałem wyżej
+> - ❌ Musi być, na tym polega algorytm
+> - ✅ Tak, po prostu tak
+> - ✅ Niby tak, ale czemu to chuj wie, nie ma to żadnego uzasadnienia, nie ma nic w internecie, wartości e i d nie mają żadnego bezpośredniego powiązania.
+
 ![](https://i.imgur.com/lfpu8tf.jpg)
-![](https://i.imgur.com/Am2leJs.jpg)
+
+> [!example] Odpowiedź na zadanie 5
+> A było wyżej hehe
+
+> [!example] Odpowiedź na zadanie 6
+> Nie gwarantuje, ponieważ istnieje wiele innych metod złamania szyfru. Świetnym przykładem jest [[Szyfr Vigenere]] który pomimo tego że posiada nieskończenie wiele różnych kombinacji, można szybko zawęzić poszukiwanie poprzez kryptoanalizę z użyciem np. [[O kryptoanalizie#Metoda anagramowa|metody anagramowej]].
+
+> [!example] Odpowiedź na zadanie 7
+> Szyfr stosuje operacje XOR na każdym bicie wiadomości. Szyfr sam w sobie raczej rzadko o ile w ogóle używany, jednakże operacja XOR jest wykorzystywana w wielu innych algorytmach szyfrujących, np. w [[Szyfr AES|AES]].
 
 #pk #it
